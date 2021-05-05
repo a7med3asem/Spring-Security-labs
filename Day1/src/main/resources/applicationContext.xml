@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/security
+                            http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <security:global-method-security secured-annotations="enabled"/>
+
+    <bean id="helloService" class="entity.HelloServiceImpl"/>
+
+<!--    <security:authentication-manager erase-credentials="true" />-->
+
+
+    <security:authentication-manager  erase-credentials="true">
+
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="test"
+                               password= "$2y$12$r.OBK2uPAvuaMqxP1SgX1uPMPU8DTIkCXkRhfYt.rGQnKSszxa6sa"
+                               authorities="ROLE_USER, ROLE_ADMIN" />
+                <security:user name="asem"
+                               password= "$2y$12$wmit8jRGMFhokDlL3Z4i.eaiVAZIy97lo7EMQq365qzQX2UHekfcG"
+                               authorities="ROLE_ADMIN" />
+            </security:user-service>
+            <security:password-encoder hash="bcrypt"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+</beans>
