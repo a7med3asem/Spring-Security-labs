@@ -1,11 +1,10 @@
-package entity;
+package service;
 
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 
 import javax.annotation.security.PermitAll;
-import javax.annotation.security.RolesAllowed;
 
 public interface HelloService {
 

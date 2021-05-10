@@ -1,5 +1,3 @@
-package entity;
-
 import java.nio.file.AccessDeniedException;
 import java.util.Scanner;
 

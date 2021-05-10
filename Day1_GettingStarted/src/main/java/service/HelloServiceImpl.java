@@ -1,4 +1,4 @@
-package entity;
+package service;
 
 public class HelloServiceImpl implements HelloService {
 

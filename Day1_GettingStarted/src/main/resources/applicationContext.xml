@@ -9,7 +9,7 @@
 
     <security:global-method-security secured-annotations="enabled"/>
 
-    <bean id="helloService" class="entity.HelloServiceImpl"/>
+    <bean id="helloService" class="service.HelloServiceImpl"/>
 
 <!--    <security:authentication-manager erase-credentials="true" />-->
 
